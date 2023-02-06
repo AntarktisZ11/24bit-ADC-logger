@@ -1,0 +1,15 @@
+kibot:
+  version: 1
+
+outputs:
+  ## Visual Diff of the Project
+  - name: "visual-diff-schematic"
+    comment: "Generate PDF with differences for schematics"
+    type: "diff"
+    dir: "./diff/"
+    options:
+      old_type: "git"
+      old: "main"
+      new_type: "current"
+      only_different: true
+      diff_mode: "red_green"
