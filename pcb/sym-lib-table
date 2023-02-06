@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name "XC9221")(type "KiCad")(uri "${KIPRJMOD}/library/symbols/XC9221.kicad_sym")(options "")(descr ""))
+  (lib (name "Si2301CDS")(type "KiCad")(uri "${KIPRJMOD}/library/symbols/Si2301CDS.kicad_sym")(options "")(descr ""))
+)
