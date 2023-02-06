@@ -4,6 +4,13 @@
 
   (paper "A4")
 
+  (title_block
+    (title "24bit ADC logger")
+    (date "%%date%%")
+    (rev "%%version%%")
+    (company "SA6MBO")
+  )
+
   (lib_symbols
     (symbol "Amplifier_Operational:TL071" (pin_names (offset 0.127)) (in_bom yes) (on_board yes)
       (property "Reference" "U" (id 0) (at 0 6.35 0)
