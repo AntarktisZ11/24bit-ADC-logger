@@ -30,12 +30,32 @@ jobs:
       # Check out the files
       - uses: actions/checkout@v2
 
-      # Actually run KiBot to generate all the files. The KiBot script used is
-      # in the .kibot/release.kibot.yaml folder.
-      - name: Generate schematic documentation
+      # Create boolean for if the filetype
+      - uses: dorny/paths-filter@v2
+        id: filter
+        with:
+          filters: |
+            schematic:
+              - "**.kicad_sch"
+            pcb:
+              - "**.kicad_pcb"
+
+      # Generate the schematic diff PDF
+      - name: Generate schematic diff
+        if: steps.filter.outputs.schematic == 'true'
         uses: INTI-CMNB/KiBot@v2_k6
         with:
-          config: .kibot/diff.kibot.yaml
+          config: .kibot/schematic-diff.kibot.yaml
+          dir: ${{ env.OutputFolder }}
+          schema: pcb/${{ env.BaseFileName }}.kicad_sch
+          board: pcb/${{ env.BaseFileName }}.kicad_pcb
+
+      # Generate the PCB diff PDF
+      - name: Generate PCB diff
+        if: steps.filter.outputs.pcb == 'true'
+        uses: INTI-CMNB/KiBot@v2_k6
+        with:
+          config: .kibot/pcb-diff.kibot.yaml
           dir: ${{ env.OutputFolder }}
           schema: pcb/${{ env.BaseFileName }}.kicad_sch
           board: pcb/${{ env.BaseFileName }}.kicad_pcb
