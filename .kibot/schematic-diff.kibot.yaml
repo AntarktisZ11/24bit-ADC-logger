@@ -9,7 +9,7 @@ outputs:
     dir: "./"
     options:
       old_type: "git"
-      old: "main"
+      old: "HEAD~"
       new_type: "current"
       only_different: true
       diff_mode: "red_green"
