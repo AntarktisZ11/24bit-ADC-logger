@@ -1939,7 +1939,7 @@
     (property "Reference" "C2" (id 0) (at 89.1159 66.3951 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Value" "100 nF" (id 1) (at 89.1159 69.1702 0)
+    (property "Value" "0.1 uF" (id 1) (at 89.1159 69.1702 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Footprint" "" (id 2) (at 91.44 67.31 0)
@@ -2914,7 +2914,7 @@
       (reference "C1") (unit 1) (value "C") (footprint "")
     )
     (path "/0fafedb4-75f0-46bd-ad25-e71605789522"
-      (reference "C2") (unit 1) (value "100 nF") (footprint "")
+      (reference "C2") (unit 1) (value "0.1 uF") (footprint "")
     )
     (path "/c2d5842f-85a0-468a-8cc5-d2ab1d5f7796"
       (reference "C3") (unit 1) (value "1µF") (footprint "")
