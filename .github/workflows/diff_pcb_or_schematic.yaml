@@ -28,7 +28,7 @@ jobs:
     # These are all the steps that generate the files.
     steps:
       # Check out the files
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       # Create boolean for if the filetype
       - uses: dorny/paths-filter@v2
@@ -62,7 +62,7 @@ jobs:
 
       # Archive all the artifacts from output and attach to the action's results.
       - name: Archive production artifacts
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: diff
           path: ${{ env.OutputFolder }}/**
