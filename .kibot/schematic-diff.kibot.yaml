@@ -9,7 +9,7 @@ outputs:
     dir: "./"
     options:
       old_type: "git"
-      old: b994d8962946e40d13ae9fed8490937ee70086d8 # hardcoded for testing
+      old: "KIBOT_LAST-1"
       new_type: "current"
       only_different: true
       diff_mode: "red_green"
