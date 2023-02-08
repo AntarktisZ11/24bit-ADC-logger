@@ -1275,7 +1275,6 @@
     )
   )
 
-
   (junction (at 181.61 73.66) (diameter 0) (color 0 0 0 0)
     (uuid 1be87359-875d-431d-9eae-353b5160e693)
   )
@@ -2006,7 +2005,7 @@
     (property "Reference" "R2" (id 0) (at 114.808 164.1915 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "R" (id 1) (at 114.808 166.9666 0)
+    (property "Value" "100k" (id 1) (at 114.808 166.9666 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "" (id 2) (at 111.252 165.1 90)
@@ -2773,7 +2772,7 @@
     (property "Reference" "R1" (id 0) (at 114.808 148.9515 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "R" (id 1) (at 114.808 151.7266 0)
+    (property "Value" "100k" (id 1) (at 114.808 151.7266 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "" (id 2) (at 111.252 149.86 90)
@@ -2792,7 +2791,7 @@
     (property "Reference" "RV1" (id 0) (at 111.2521 156.5715 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Value" "R_Potentiometer" (id 1) (at 111.2521 159.3466 0)
+    (property "Value" "1k" (id 1) (at 111.2521 159.3466 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Footprint" "" (id 2) (at 113.03 157.48 0)
@@ -2941,16 +2940,16 @@
       (reference "L1") (unit 1) (value "33µH") (footprint "")
     )
     (path "/fc245db5-421a-4183-a36a-ab38da22d07c"
-      (reference "R1") (unit 1) (value "R") (footprint "")
+      (reference "R1") (unit 1) (value "100k") (footprint "")
     )
     (path "/42757b42-27bf-4636-a81b-a0eef55159f8"
-      (reference "R2") (unit 1) (value "R") (footprint "")
+      (reference "R2") (unit 1) (value "100k") (footprint "")
     )
     (path "/f219f056-9bb7-4d30-8789-cf781989bbf6"
       (reference "R3") (unit 1) (value "10k") (footprint "")
     )
     (path "/fd82e840-dd5b-4d2f-b981-bafa8f50aca5"
-      (reference "RV1") (unit 1) (value "R_Potentiometer") (footprint "")
+      (reference "RV1") (unit 1) (value "1k") (footprint "")
     )
     (path "/b9fb1e52-5bfb-4074-afb5-c49d4199f8ba"
       (reference "U1") (unit 1) (value "REF5050AD") (footprint "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm")
