@@ -1,0 +1,36 @@
+name: Update PCB documentation
+
+on:
+  # Manually trigger workflow
+  workflow_dispatch:
+    inputs:
+      KiBot-Verbosity:
+        description: "Log levels for KiBot. Higher is more verbose."
+        required: false
+        default: "0"
+        type: choice
+        options:
+          - "0"
+          - "1"
+          - "2"
+          - "3"
+
+  # Trigger when PCB is edited
+  push:
+    branches: [main]
+    paths:
+      - "**.kicad_sch"
+      - "**.kicad_pcb"
+
+jobs:
+  PCB_change:
+    permissions:
+      # Give the default GITHUB_TOKEN write permission to commit and push the
+      # added or changed files to the repository.
+      contents: write
+
+    uses: AntarktisZ11/reusable-workflows/.github/workflows/kicad_pcb_change.yaml@main
+    with:
+      KiCadProjectName: 24bit-ADC-logger
+      KiCadProjectDir: pcb
+      KiBot-Verbosity: ${{ inputs.KiBot-Verbosity || '0' }}
