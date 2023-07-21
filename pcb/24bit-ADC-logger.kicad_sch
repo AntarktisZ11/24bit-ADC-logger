@@ -6,8 +6,8 @@
 
   (title_block
     (title "24bit ADC logger")
-    (date "%%date%%")
-    (rev "%%version%%")
+    (date "${DATE}")
+    (rev "${REV}")
     (company "SA6MBO")
   )
 
