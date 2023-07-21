@@ -322,5 +322,8 @@
       ""
     ]
   ],
-  "text_variables": {}
+  "text_variables": {
+    "DATE": "2023-07-21",
+    "REV": "Git:88c00bc"
+  }
 }
